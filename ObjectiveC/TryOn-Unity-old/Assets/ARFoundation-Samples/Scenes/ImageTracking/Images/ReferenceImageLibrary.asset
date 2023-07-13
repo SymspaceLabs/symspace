@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5438900029218683827
+  m_GuidHigh: 11338665651040755373
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4798031201329212583
+      m_GuidHigh: 11985795455136517516
+    m_SerializedTextureGuid:
+      m_GuidLow: 17599441020165146843
+      m_GuidHigh: 16910109844243893112
+    m_Size: {x: 0.1, y: 0.16011657}
+    m_SpecifySize: 1
+    m_Name: astronaut
+    m_Texture: {fileID: 2800000, guid: ac61c8dbc65cf43d784bfe4a4fc7acea, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5567535386227910799
+      m_GuidHigh: 13276811009483624894
+    m_SerializedTextureGuid:
+      m_GuidLow: 2639584814113707580
+      m_GuidHigh: 6851466645973340042
+    m_Size: {x: 0.1, y: 0.081750624}
+    m_SpecifySize: 1
+    m_Name: logo
+    m_Texture: {fileID: 2800000, guid: 3fc3563cb06724a18a8fad279d4c155f, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4814262893886103958
+      m_GuidHigh: 11997673014865352100
+    m_SerializedTextureGuid:
+      m_GuidLow: 13040984172700893670
+      m_GuidHigh: 6788043655867848601
+    m_Size: {x: 0.1, y: 0.12580878}
+    m_SpecifySize: 1
+    m_Name: kaaba
+    m_Texture: {fileID: 2800000, guid: cf5401e6e202b4fa99d7d88bbdf9335e, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4807205452335511551
+      m_GuidHigh: 10600936008428742290
+    m_SerializedTextureGuid:
+      m_GuidLow: 15288449769344511795
+      m_GuidHigh: 2817370383876207002
+    m_Size: {x: 0.1, y: 0.15392955}
+    m_SpecifySize: 1
+    m_Name: astranaut_blue
+    m_Texture: {fileID: 2800000, guid: 442eaf337c10d42b9ab1a5e36f4f1927, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4978064649377231887
+      m_GuidHigh: 845657932449583242
+    m_SerializedTextureGuid:
+      m_GuidLow: 14180665639447139022
+      m_GuidHigh: 8810539877502255946
+    m_Size: {x: 0.1, y: 0.0761488}
+    m_SpecifySize: 1
+    m_Name: baterfly
+    m_Texture: {fileID: 2800000, guid: 45d592ced844c4cb4a83ef9d5653457a, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5078182129114860335
+      m_GuidHigh: 17292952766416805537
+    m_SerializedTextureGuid:
+      m_GuidLow: 356562524751015966
+      m_GuidHigh: 2574933158747433545
+    m_Size: {x: 0.1, y: 0.12669104}
+    m_SpecifySize: 1
+    m_Name: kaaba_black
+    m_Texture: {fileID: 2800000, guid: 2400301ec3ba04f249ea83b71000bc23, type: 3}

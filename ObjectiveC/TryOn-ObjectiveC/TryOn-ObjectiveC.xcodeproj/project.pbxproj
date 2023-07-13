@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D15FC472264A1600006315A /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D15FC462264A1600006315A /* MainViewController.mm */; };
+		9D15FC4A2264A1600006315A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15FC482264A1600006315A /* Main.storyboard */; };
+		9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15FC4B2264A1600006315A /* Assets.xcassets */; };
+		9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15FC4D2264A1600006315A /* LaunchScreen.storyboard */; };
+		9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D78DAFC2265A7FC00274039 /* UIKit.framework */; };
+		A90BE37527B12D5600E322A8 /* TONFTNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BE37427B12D5600E322A8 /* TONFTNavigationViewController.m */; };
+		A90BE37C27B1305F00E322A8 /* TOBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BE37B27B1305F00E322A8 /* TOBaseViewController.m */; };
+		A90BE37F27B131A400E322A8 /* TONFTCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BE37E27B131A400E322A8 /* TONFTCodeViewController.m */; };
+		A937EEC127AD54240005390D /* TOArtCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A937EEC027AD54240005390D /* TOArtCollectionViewCell.m */; };
+		A93D029B27B27104009A74E1 /* TOARArtUnityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93D029A27B27104009A74E1 /* TOARArtUnityViewController.m */; };
+		A9CD146827AAC5FE00E5A388 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */; };
+		A9CD146927AAC5FE00E5A388 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9CD14BD27ABFB6200E5A388 /* TONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14BC27ABFB6200E5A388 /* TONavigationController.m */; };
+		A9CD14C127ABFCC900E5A388 /* TOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14C027ABFCC900E5A388 /* TOHomeViewController.m */; };
+		A9CD14C427ABFFA500E5A388 /* TOFittingRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14C327ABFFA500E5A388 /* TOFittingRoomViewController.m */; };
+		A9CD14C727AC06B300E5A388 /* TOARVisualsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14C627AC06B300E5A388 /* TOARVisualsViewController.m */; };
+		A9CD14CA27AC06D300E5A388 /* TOARArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14C927AC06D300E5A388 /* TOARArtViewController.m */; };
+		A9CD14CD27AC073E00E5A388 /* TOProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14CC27AC073E00E5A388 /* TOProfileViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A937EEB827AD508E0005390D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A937EEB227AD508E0005390D /* Unity-iPhone.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
+			remoteInfo = "Unity-iPhone";
+		};
+		A937EEBA27AD508E0005390D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A937EEB227AD508E0005390D /* Unity-iPhone.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5623C57317FDCB0800090B9E;
+			remoteInfo = "Unity-iPhone Tests";
+		};
+		A937EEBC27AD508E0005390D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A937EEB227AD508E0005390D /* Unity-iPhone.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D25AB9D213FB47800354C27;
+			remoteInfo = UnityFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9CD146A27AAC5FE00E5A388 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9CD146927AAC5FE00E5A388 /* UnityFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9D15FC3F2264A1600006315A /* TryOn-ObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TryOn-ObjectiveC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D15FC462264A1600006315A /* MainViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
+		9D15FC492264A1600006315A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D15FC4B2264A1600006315A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D15FC4E2264A1600006315A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D15FC502264A1600006315A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D78DAFC2265A7FC00274039 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A90BE37327B12D5600E322A8 /* TONFTNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TONFTNavigationViewController.h; sourceTree = "<group>"; };
+		A90BE37427B12D5600E322A8 /* TONFTNavigationViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TONFTNavigationViewController.m; sourceTree = "<group>"; };
+		A90BE37927B12DCF00E322A8 /* TOProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOProtocols.h; sourceTree = "<group>"; };
+		A90BE37A27B1305F00E322A8 /* TOBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOBaseViewController.h; sourceTree = "<group>"; };
+		A90BE37B27B1305F00E322A8 /* TOBaseViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOBaseViewController.m; sourceTree = "<group>"; };
+		A90BE37D27B131A400E322A8 /* TONFTCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TONFTCodeViewController.h; sourceTree = "<group>"; };
+		A90BE37E27B131A400E322A8 /* TONFTCodeViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TONFTCodeViewController.m; sourceTree = "<group>"; };
+		A937EEB227AD508E0005390D /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "../TryOn-Unity-old/Builds/IOS/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
+		A937EEBF27AD54240005390D /* TOArtCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOArtCollectionViewCell.h; sourceTree = "<group>"; };
+		A937EEC027AD54240005390D /* TOArtCollectionViewCell.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOArtCollectionViewCell.m; sourceTree = "<group>"; };
+		A93D029927B27104009A74E1 /* TOARArtUnityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOARArtUnityViewController.h; sourceTree = "<group>"; };
+		A93D029A27B27104009A74E1 /* TOARArtUnityViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOARArtUnityViewController.m; sourceTree = "<group>"; };
+		A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9CD14BC27ABFB6200E5A388 /* TONavigationController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TONavigationController.m; sourceTree = "<group>"; };
+		A9CD14BE27ABFB8E00E5A388 /* TONavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TONavigationController.h; sourceTree = "<group>"; };
+		A9CD14BF27ABFCC900E5A388 /* TOHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOHomeViewController.h; sourceTree = "<group>"; };
+		A9CD14C027ABFCC900E5A388 /* TOHomeViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOHomeViewController.m; sourceTree = "<group>"; };
+		A9CD14C227ABFFA500E5A388 /* TOFittingRoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOFittingRoomViewController.h; sourceTree = "<group>"; };
+		A9CD14C327ABFFA500E5A388 /* TOFittingRoomViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOFittingRoomViewController.m; sourceTree = "<group>"; };
+		A9CD14C527AC06B300E5A388 /* TOARVisualsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOARVisualsViewController.h; sourceTree = "<group>"; };
+		A9CD14C627AC06B300E5A388 /* TOARVisualsViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOARVisualsViewController.m; sourceTree = "<group>"; };
+		A9CD14C827AC06D300E5A388 /* TOARArtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOARArtViewController.h; sourceTree = "<group>"; };
+		A9CD14C927AC06D300E5A388 /* TOARArtViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOARArtViewController.m; sourceTree = "<group>"; };
+		A9CD14CB27AC073E00E5A388 /* TOProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOProfileViewController.h; sourceTree = "<group>"; };
+		A9CD14CC27AC073E00E5A388 /* TOProfileViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOProfileViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D15FC3C2264A15F0006315A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */,
+				A9CD146827AAC5FE00E5A388 /* UnityFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D15FC362264A15F0006315A = {
+			isa = PBXGroup;
+			children = (
+				A937EEB227AD508E0005390D /* Unity-iPhone.xcodeproj */,
+				9D15FC412264A1600006315A /* TryOn-ObjectiveC */,
+				9D15FC402264A1600006315A /* Products */,
+				9D78DAFB2265A7FC00274039 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D15FC402264A1600006315A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D15FC3F2264A1600006315A /* TryOn-ObjectiveC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D15FC412264A1600006315A /* TryOn-ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				A937EEC327AD5F130005390D /* ViewControllers */,
+				A937EEC227AD5EF40005390D /* Views */,
+				9D15FC462264A1600006315A /* MainViewController.mm */,
+				9D15FC482264A1600006315A /* Main.storyboard */,
+				9D15FC4B2264A1600006315A /* Assets.xcassets */,
+				9D15FC4D2264A1600006315A /* LaunchScreen.storyboard */,
+				9D15FC502264A1600006315A /* Info.plist */,
+				A9CD14BC27ABFB6200E5A388 /* TONavigationController.m */,
+				A9CD14BE27ABFB8E00E5A388 /* TONavigationController.h */,
+				A90BE37327B12D5600E322A8 /* TONFTNavigationViewController.h */,
+				A90BE37427B12D5600E322A8 /* TONFTNavigationViewController.m */,
+				A90BE37927B12DCF00E322A8 /* TOProtocols.h */,
+			);
+			path = "TryOn-ObjectiveC";
+			sourceTree = "<group>";
+		};
+		9D78DAFB2265A7FC00274039 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */,
+				9D78DAFC2265A7FC00274039 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A937EEB327AD508E0005390D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A937EEB927AD508E0005390D /* Unity-Target-New.app */,
+				A937EEBB27AD508E0005390D /* Unity-iPhone Tests.xctest */,
+				A937EEBD27AD508E0005390D /* UnityFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A937EEC227AD5EF40005390D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A937EEBF27AD54240005390D /* TOArtCollectionViewCell.h */,
+				A937EEC027AD54240005390D /* TOArtCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A937EEC327AD5F130005390D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9CD14C227ABFFA500E5A388 /* TOFittingRoomViewController.h */,
+				A9CD14C327ABFFA500E5A388 /* TOFittingRoomViewController.m */,
+				A9CD14C527AC06B300E5A388 /* TOARVisualsViewController.h */,
+				A9CD14C627AC06B300E5A388 /* TOARVisualsViewController.m */,
+				A9CD14C827AC06D300E5A388 /* TOARArtViewController.h */,
+				A9CD14C927AC06D300E5A388 /* TOARArtViewController.m */,
+				A9CD14CB27AC073E00E5A388 /* TOProfileViewController.h */,
+				A9CD14CC27AC073E00E5A388 /* TOProfileViewController.m */,
+				A9CD14BF27ABFCC900E5A388 /* TOHomeViewController.h */,
+				A9CD14C027ABFCC900E5A388 /* TOHomeViewController.m */,
+				A90BE37A27B1305F00E322A8 /* TOBaseViewController.h */,
+				A90BE37B27B1305F00E322A8 /* TOBaseViewController.m */,
+				A90BE37D27B131A400E322A8 /* TONFTCodeViewController.h */,
+				A90BE37E27B131A400E322A8 /* TONFTCodeViewController.m */,
+				A93D029927B27104009A74E1 /* TOARArtUnityViewController.h */,
+				A93D029A27B27104009A74E1 /* TOARArtUnityViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D15FC3E2264A15F0006315A /* TryOn-ObjectiveC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D15FC552264A1600006315A /* Build configuration list for PBXNativeTarget "TryOn-ObjectiveC" */;
+			buildPhases = (
+				9D15FC3B2264A15F0006315A /* Sources */,
+				9D15FC3C2264A15F0006315A /* Frameworks */,
+				9D15FC3D2264A15F0006315A /* Resources */,
+				A9CD146A27AAC5FE00E5A388 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TryOn-ObjectiveC";
+			productName = NativeiOSApp;
+			productReference = 9D15FC3F2264A1600006315A /* TryOn-ObjectiveC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D15FC372264A15F0006315A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = unity;
+				TargetAttributes = {
+					9D15FC3E2264A15F0006315A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 9D15FC3A2264A15F0006315A /* Build configuration list for PBXProject "TryOn-ObjectiveC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D15FC362264A15F0006315A;
+			productRefGroup = 9D15FC402264A1600006315A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A937EEB327AD508E0005390D /* Products */;
+					ProjectRef = A937EEB227AD508E0005390D /* Unity-iPhone.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				9D15FC3E2264A15F0006315A /* TryOn-ObjectiveC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A937EEB927AD508E0005390D /* Unity-Target-New.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			name = "Unity-Target-New.app";
+			path = TryOnAR.app;
+			remoteRef = A937EEB827AD508E0005390D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A937EEBB27AD508E0005390D /* Unity-iPhone Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unity-iPhone Tests.xctest";
+			remoteRef = A937EEBA27AD508E0005390D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A937EEBD27AD508E0005390D /* UnityFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UnityFramework.framework;
+			remoteRef = A937EEBC27AD508E0005390D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D15FC3D2264A15F0006315A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */,
+				9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */,
+				9D15FC4A2264A1600006315A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D15FC3B2264A15F0006315A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9CD14CA27AC06D300E5A388 /* TOARArtViewController.m in Sources */,
+				A90BE37F27B131A400E322A8 /* TONFTCodeViewController.m in Sources */,
+				A9CD14BD27ABFB6200E5A388 /* TONavigationController.m in Sources */,
+				A9CD14CD27AC073E00E5A388 /* TOProfileViewController.m in Sources */,
+				A93D029B27B27104009A74E1 /* TOARArtUnityViewController.m in Sources */,
+				A9CD14C127ABFCC900E5A388 /* TOHomeViewController.m in Sources */,
+				A90BE37C27B1305F00E322A8 /* TOBaseViewController.m in Sources */,
+				A9CD14C427ABFFA500E5A388 /* TOFittingRoomViewController.m in Sources */,
+				A937EEC127AD54240005390D /* TOArtCollectionViewCell.m in Sources */,
+				A9CD14C727AC06B300E5A388 /* TOARVisualsViewController.m in Sources */,
+				A90BE37527B12D5600E322A8 /* TONFTNavigationViewController.m in Sources */,
+				9D15FC472264A1600006315A /* MainViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D15FC482264A1600006315A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D15FC492264A1600006315A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D15FC4D2264A1600006315A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D15FC4E2264A1600006315A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D15FC532264A1600006315A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9D15FC542264A1600006315A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D15FC562264A1600006315A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = M9D35F83S4;
+				INFOPLIST_FILE = "TryOn-ObjectiveC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waveworld.waveworld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D15FC572264A1600006315A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = M9D35F83S4;
+				INFOPLIST_FILE = "TryOn-ObjectiveC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.waveworld.waveworld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D15FC3A2264A15F0006315A /* Build configuration list for PBXProject "TryOn-ObjectiveC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D15FC532264A1600006315A /* Debug */,
+				9D15FC542264A1600006315A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D15FC552264A1600006315A /* Build configuration list for PBXNativeTarget "TryOn-ObjectiveC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D15FC562264A1600006315A /* Debug */,
+				9D15FC572264A1600006315A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D15FC372264A15F0006315A /* Project object */;
+}
