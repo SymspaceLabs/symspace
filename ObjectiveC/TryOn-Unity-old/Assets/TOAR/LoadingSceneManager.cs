@@ -21,7 +21,7 @@ namespace TOAR.SceneLoading
             LoadSceneAsync(sceneName, mode, showPreloader);
         }
 
-        public static void LoadSceneAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Single, bool showPreloader = false, bool unload = true, Action<Scene> loadCompleted = null)
+        public static void LoadSceneAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Single, bool showPreloader = false, bool unload = true, Action<UnityEngine.SceneManagement.Scene> loadCompleted = null)
         {
             if (showPreloader)
                 LoadLoadingSceneAsync(sceneName, mode, loadCompleted);
@@ -29,7 +29,7 @@ namespace TOAR.SceneLoading
                 LoadTargetSceneAsync(sceneName, mode, unload, loadCompleted);
         }
 
-        static async void LoadLoadingSceneAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Single, Action<Scene> loadCompleted = null)
+        static async void LoadLoadingSceneAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Single, Action<UnityEngine.SceneManagement.Scene> loadCompleted = null)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace TOAR.SceneLoading
             }
         }
 
-        static async void LoadTargetSceneAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Single, bool unload = true,  Action<Scene> loadCompleted = null)
+        static async void LoadTargetSceneAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Single, bool unload = true,  Action<UnityEngine.SceneManagement.Scene> loadCompleted = null)
         {
             try
             {
