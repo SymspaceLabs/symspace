@@ -6,6 +6,7 @@ using UnityEngine.XR.ARSubsystems;
 
 namespace UnityEngine.XR.ARFoundation.Samples
 {
+
     public class HumanBodyTracker : MonoBehaviour
     {
         [SerializeField]
@@ -15,6 +16,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [SerializeField]
         [Tooltip("The ARHumanBodyManager which will produce body tracking events.")]
         ARHumanBodyManager m_HumanBodyManager;
+
+        [SerializeField] private GameObject m_AnchorPrefab;
+
+        private Dictionary<TrackableId, GameObject> m_AnchorsDictionary = new Dictionary<TrackableId, GameObject>();
 
         /// <summary>
         /// Get/Set the <c>ARHumanBodyManager</c>.
@@ -62,6 +67,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     m_SkeletonTracker.Add(humanBody.trackableId, boneController);
                 }
 
+                if (!m_AnchorsDictionary.ContainsKey(humanBody.trackableId))
+                {
+                    var anchor = Instantiate(m_AnchorPrefab, humanBody.transform);
+                    anchor.transform.position = humanBody.transform.position;
+                    anchor.transform.rotation = humanBody.transform.rotation;
+                    //anchor.transform.localScale = humanBody.transform.localScale;
+                    m_AnchorsDictionary.Add(humanBody.trackableId, anchor);
+                }
+
                 boneController.InitializeSkeletonJoints();
                 boneController.ApplyBodyPose(humanBody);
             }
@@ -72,6 +86,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 {
                     boneController.ApplyBodyPose(humanBody);
                 }
+                
+                if (m_AnchorsDictionary.ContainsKey(humanBody.trackableId))
+                {
+                    var anchor = m_AnchorsDictionary[humanBody.trackableId];
+                    anchor.transform.position = humanBody.transform.position;
+                    anchor.transform.rotation = humanBody.transform.rotation;
+                    //anchor.transform.localScale = humanBody.transform.localScale;
+                }
             }
 
             foreach (var humanBody in eventArgs.removed)
@@ -81,6 +103,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 {
                     Destroy(boneController.gameObject);
                     m_SkeletonTracker.Remove(humanBody.trackableId);
+                }
+                
+                if (m_AnchorsDictionary.ContainsKey(humanBody.trackableId))
+                {
+                    m_AnchorsDictionary.Remove(humanBody.trackableId);
                 }
             }
         }

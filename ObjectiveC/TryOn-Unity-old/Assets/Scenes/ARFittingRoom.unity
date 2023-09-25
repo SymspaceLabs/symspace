@@ -1935,7 +1935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Pose2D: 0
   m_Pose3D: 1
-  m_Pose3DScaleEstimation: 1
+  m_Pose3DScaleEstimation: 0
   m_HumanBodyPrefab: {fileID: 0}
 --- !u!114 &1319991954
 MonoBehaviour:
@@ -2021,7 +2021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1427795753
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959473036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7a99cf97577b431494054a0b0e5f423, type: 3}
   m_Name: 
@@ -2743,3 +2743,5 @@ MonoBehaviour:
   m_SkeletonPrefab: {fileID: 7904003178404780988, guid: 17bff86bef362428fb4689ccd87c214d,
     type: 3}
   m_HumanBodyManager: {fileID: 1319991953}
+  m_AnchorPrefab: {fileID: 8195096772457521625, guid: 72c8b0e065b3645dd8a4d22e0f346965,
+    type: 3}
