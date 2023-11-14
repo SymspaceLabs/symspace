@@ -38,6 +38,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.005
       objectReference: {fileID: 0}
+    - target: {fileID: 4737105868958689823, guid: 72c8b0e065b3645dd8a4d22e0f346965,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480805289564613892, guid: 72c8b0e065b3645dd8a4d22e0f346965,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7571306305456979278, guid: 72c8b0e065b3645dd8a4d22e0f346965,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803331023577631669, guid: 72c8b0e065b3645dd8a4d22e0f346965,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8004785061911102045, guid: 72c8b0e065b3645dd8a4d22e0f346965,
         type: 3}
       propertyPath: m_RootOrder
@@ -112,6 +132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Anchor-Joints Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032717752219303999, guid: 72c8b0e065b3645dd8a4d22e0f346965,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9193254726677391682, guid: 72c8b0e065b3645dd8a4d22e0f346965,
         type: 3}
