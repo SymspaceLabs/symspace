@@ -1,0 +1,136 @@
+import SwiftUI
+
+// Orb View
+struct GlowingOrb: View {
+    var color: Color
+    @State private var position: CGPoint
+    @State private var xDirection: CGFloat
+    @State private var yDirection: CGFloat
+    
+    init(color: Color) {
+        self.color = color
+        // Randomize the starting position and direction
+        _position = State(initialValue: CGPoint(x: CGFloat.random(in: 50...UIScreen.main.bounds.width - 50), 
+                                                y: CGFloat.random(in: 50...UIScreen.main.bounds.height - 50)))
+        
+        // Choose randomly between -1 and 1 for directions
+        _xDirection = State(initialValue: Bool.random() ? -1 : 1)
+        _yDirection = State(initialValue: Bool.random() ? -1 : 1)
+    }
+    
+    let timer = Timer.publish(every: 0.02, on: .main, in: .common).autoconnect()
+    
+    var body: some View {
+        Circle()
+            .fill(color)
+            .frame(width: 200, height: 200) // Reduced size for better visibility
+            .shadow(radius: 50) // Adjusted glow effect
+            .shadow(color: color.opacity(5), radius: 5, x: 1, y: 1)
+            .shadow(color: color.opacity(5), radius: 5, x: 1, y: 1)
+            .shadow(color: color.opacity(5), radius: 5, x: 1, y: 1)
+            .position(position)
+            .onReceive(timer) { _ in
+                let maxX = UIScreen.main.bounds.width - 50
+                let maxY = UIScreen.main.bounds.height - 50
+                if position.x >= maxX || position.x <= 50 {
+                    xDirection *= -1
+                }
+                if position.y >= maxY || position.y <= 50 {
+                    yDirection *= -1
+                }
+                position.x += xDirection * 4 // Adjusted movement speed
+                position.y += yDirection * 4
+            }
+    }
+}
+
+// Main ContentView
+struct ContentView: View {
+    @State private var showFirstText = false
+    @State private var removeFirstText = false
+    @State private var showSecondText = false
+    @State private var showButton = false
+    
+    let firstText = "Simulate Your Own Reality Today with"
+    let secondText = "SYMSPACE"
+    var backgroundColor = Color.white
+    var firstTextColor = Color.black
+    var secondTextColor = Color.black
+    var firstTextFontSize: CGFloat = 20
+    var secondTextFontSize: CGFloat = 50
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                // Background Color
+                backgroundColor.edgesIgnoringSafeArea(.all)
+                
+                // Glowing Orbs
+                GlowingOrb(color: Color.black) // Simplified color for testing
+                GlowingOrb(color: Color.black)
+                GlowingOrb(color: Color.black)
+                
+                // First Animated Text
+                if !removeFirstText {
+                    HStack(spacing: 0) {
+                        ForEach(0..<firstText.count, id: \.self) { index in
+                            Text(String(firstText[firstText.index(firstText.startIndex, offsetBy: index)]))
+                                .opacity(showFirstText ? 10 : 0)
+                                .foregroundColor(firstTextColor)
+                                .font(.system(size: firstTextFontSize))
+                                .animation(Animation.easeInOut(duration: 0.5).delay(Double(index) * 0.05), value: showFirstText)
+                        }
+                    }
+                    .onAppear {
+                        showFirstText = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + Double(firstText.count) * 0.05 + 2.0) {
+                            removeFirstText = true
+                            showSecondText = true
+                            showButton = true
+                        }
+                    }
+                }
+                
+                // Second Animated Text
+                if showSecondText {
+                    Text(secondText)
+                        .opacity(showSecondText ? 1 : 0)
+                        .foregroundColor(secondTextColor)
+                        .font(.system(size: secondTextFontSize))
+                        .animation(Animation.easeInOut(duration: 3), value: showSecondText)
+                }
+                
+                // Continue Button
+                if showButton {
+                    Button(action: {
+                        // Action to go to the next screen
+                    }) {
+                        Text("Continue")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.blue)
+                            .cornerRadius(40)
+                            .padding(.horizontal, 20)
+                    }
+                    .opacity(showButton ? 1 : 0)
+                    .animation(Animation.easeInOut(duration: 3), value: showButton)
+                    .position(x: geometry.size.width / 2, y: geometry.size.height - 50)
+                }
+            }
+        }
+        .onTapGesture {
+            // Skip to the end of the animation
+            removeFirstText = true
+            showSecondText = true
+            showButton = true
+        }
+        .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
