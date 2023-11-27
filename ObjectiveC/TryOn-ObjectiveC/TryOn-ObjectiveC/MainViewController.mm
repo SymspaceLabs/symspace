@@ -236,7 +236,7 @@ NSDictionary* appLaunchOpts;
     NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
     UITabBarItem *tabBarItem0 = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"HomeIcon"] tag:0];
     tabBarItem0.selectedImage = [UIImage imageNamed:@"HomeIconSelected"];
-    UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Fitting Room" image:[UIImage imageNamed:@"FittingRoomIcon"] tag:1];
+    UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"AR Room" image:[UIImage imageNamed:@"FittingRoomIcon"] tag:1];
     tabBarItem1.selectedImage = [UIImage imageNamed:@"FittingRoomSelected"];
     UITabBarItem *tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"AR Visuals" image:[UIImage imageNamed:@"ARVisualsIcon"] tag:2];
     tabBarItem2.selectedImage = [UIImage imageNamed:@"ARVisualsSelected"];

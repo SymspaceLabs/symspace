@@ -45,8 +45,8 @@
         <!--Fitting Room-->
         <scene sceneID="FwZ-1O-0Z8">
             <objects>
-                <navigationController storyboardIdentifier="FittingRoomNavigationController" title="Fitting Room" id="4MW-sl-s7N" customClass="TONavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fitting Room" image="FittingRoomIcon" selectedImage="FittingRoomSelected" id="2D7-rV-4bZ"/>
+                <navigationController storyboardIdentifier="FittingRoomNavigationController" title="AR Room" id="4MW-sl-s7N" customClass="TONavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="AR Room" image="FittingRoomIcon" selectedImage="FittingRoomSelected" id="2D7-rV-4bZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DW6-8L-buC">
                         <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
