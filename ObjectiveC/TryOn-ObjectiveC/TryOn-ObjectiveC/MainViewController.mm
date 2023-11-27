@@ -51,7 +51,7 @@ void showAlert(NSString* title, NSString* msg) {
 @property UnityFramework* ufw;
 @property bool didQuit;
 
-- (void)initUnity;
+- (bool)initUnity;
 - (void)ShowMainView;
 
 - (void)didFinishLaunching:(NSNotification*)notification;
@@ -198,20 +198,20 @@ NSDictionary* appLaunchOpts;
     /*self.navVC = [[UINavigationController alloc] initWithRootViewController: self.viewController];*/
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    [self initUnity];
+    //[self initUnity];
     
     return YES;
 }
 
-- (void)initUnity
+- (bool)initUnity
 {
     if([self unityIsInitialized]) {
         showAlert(@"Unity already initialized", @"Unload Unity first");
-        return;
+        return false;
     }
     if([self didQuit]) {
         showAlert(@"Unity cannot be initialized after quit", @"Use unload instead");
-        return;
+        return false;
     }
     
     [self setUfw: UnityFrameworkLoad()];
@@ -220,24 +220,23 @@ NSDictionary* appLaunchOpts;
     [[self ufw] setDataBundleId: "com.unity3d.framework"];
     [[self ufw] registerFrameworkListener: self];
     [NSClassFromString(@"FrameworkLibAPI") registerAPIforNativeCalls:self];
-    [[self ufw] appController].quitHandler = ^(){ NSLog(@"AppController.quitHandler called"); [[self ufw] unregisterFrameworkListener: self];
+    [[self ufw] appController].quitHandler = ^(){ NSLog(@"###AppController.quitHandler called"); [[self ufw] unregisterFrameworkListener: self];
         [self setUfw: nil];
         [self showHostMainWindow:@""]; };
-   // [[self ufw] appController].quitHandler = ^(){ NSLog(@"AppController.quitHandler called"); };
     
     [[self ufw] runEmbeddedWithArgc: gArgc argv: gArgv appLaunchOpts: appLaunchOpts];
     
-    // set quit handler to change default behavior of exit app
-   
-    
-    //NSData *tempArchiveView = [NSKeyedArchiver archivedDataWithRootObject:self.viewController.tabBar];
-    //UITabBar *tabBar = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchiveView];
-   /* NSInteger selectedIndex = self.viewController.selectedIndex;
+    return true;
+}
+
+- (void)addTabbarMenu
+{
+    NSInteger selectedIndex = self.viewController.selectedIndex;
     UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(self.viewController.tabBar.frame.origin.x, self.viewController.tabBar.frame.origin.y, self.viewController.tabBar.frame.size.width, self.viewController.tabBar.frame.size.height)];
     NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
     UITabBarItem *tabBarItem0 = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"HomeIcon"] tag:0];
     tabBarItem0.selectedImage = [UIImage imageNamed:@"HomeIconSelected"];
-    UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Fitting Room" image:[UIImage imageNamed:@"FittingRoomIcon"] tag:1];
+    UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"AR Room" image:[UIImage imageNamed:@"FittingRoomIcon"] tag:1];
     tabBarItem1.selectedImage = [UIImage imageNamed:@"FittingRoomSelected"];
     UITabBarItem *tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"AR Visuals" image:[UIImage imageNamed:@"ARVisualsIcon"] tag:2];
     tabBarItem2.selectedImage = [UIImage imageNamed:@"ARVisualsSelected"];
@@ -258,64 +257,55 @@ NSDictionary* appLaunchOpts;
     tabBar.backgroundColor = [UIColor blackColor];//self.viewController.tabBar.backgroundColor;
     tabBar.barTintColor = [UIColor blackColor];//self.viewController.tabBar.barTintColor;
     tabBar.tintColor = self.viewController.tabBar.tintColor;
-    [view addSubview:tabBar];*/
-   // [view addSubview:self.viewController.tabBar];
-    /* if(self.showUnityOffButton == nil) {
-        self.showUnityOffButton = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.showUnityOffButton setTitle: @"Show Main" forState: UIControlStateNormal];
-        self.showUnityOffButton.frame = CGRectMake(0, 0, 100, 44);
-        self.showUnityOffButton.center = CGPointMake(50, 300);
-        self.showUnityOffButton.backgroundColor = [UIColor greenColor];
-        [view addSubview: self.showUnityOffButton];
-        [self.showUnityOffButton addTarget: self action: @selector(showHostMainWindow) forControlEvents: UIControlEventPrimaryActionTriggered];
-        
-        self.btnSendMsg = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.btnSendMsg setTitle: @"Send Msg" forState: UIControlStateNormal];
-        self.btnSendMsg.frame = CGRectMake(0, 0, 100, 44);
-        self.btnSendMsg.center = CGPointMake(150, 300);
-        self.btnSendMsg.backgroundColor = [UIColor yellowColor];
-        [view addSubview: self.btnSendMsg];
-        [self.btnSendMsg addTarget: self action: @selector(sendMsgToUnity) forControlEvents: UIControlEventPrimaryActionTriggered];
-        
-        // Unload
-        self.unloadBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.unloadBtn setTitle: @"Unload" forState: UIControlStateNormal];
-        self.unloadBtn.frame = CGRectMake(250, 0, 100, 44);
-        self.unloadBtn.center = CGPointMake(250, 300);
-        self.unloadBtn.backgroundColor = [UIColor redColor];
-        [self.unloadBtn addTarget: self action: @selector(unloadButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
-        [view addSubview: self.unloadBtn];
-        
-        // Quit
-        self.quitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.quitBtn setTitle: @"Quit" forState: UIControlStateNormal];
-        self.quitBtn.frame = CGRectMake(250, 0, 100, 44);
-        self.quitBtn.center = CGPointMake(250, 350);
-        self.quitBtn.backgroundColor = [UIColor redColor];
-        [self.quitBtn addTarget: self action: @selector(quitButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
-        [view addSubview: self.quitBtn];
-    }*/
-    /*
-    UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(0, view.bounds.size.height - 117, view.bounds.size.width, 117)];
-    tabBar.delegate=self;   //here you need import the protocol <UITabBarDelegate>
     [view addSubview:tabBar];
+}
+
+- (void)initArtUnityScene
+{
+    bool unityIntResult = [self initUnity];
     
-    NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
+    if(unityIntResult)
+    {
+        NSLog(@"###Unity art did init");
+    }
+    else
+    {
+        NSLog(@"###ERROR art Unity didn't init");
+    }
+}
 
-    UITabBarItem *tabBarItem0 = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"HomeIcon"] tag:0];
-    UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"Fitting Room" image:[UIImage imageNamed:@"FittingRoomIcon"] tag:1];
-    UITabBarItem *tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"AR Visuals" image:[UIImage imageNamed:@"ARVisualsIcon"] tag:2];
-    UITabBarItem *tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"AR Art" image:[UIImage imageNamed:@"ARArtIcon"] tag:3];
-    UITabBarItem *tabBarItem4 = [[UITabBarItem alloc] initWithTitle:@"Profile" image:[UIImage imageNamed:@"ProfileIcon"] tag:4];
+- (void)initVisualsUnityScene
+{
+    bool unityIntResult = [self initUnity];
+    
+    if(unityIntResult)
+    {
+        NSLog(@"###Unity visual did init");
+        [self addTabbarMenu];
+    }
+    else
+    {
+        NSLog(@"###ERROR Unity visual didn't init");
+    }
+    
+    [self changeUnityScene:@"ARVisuals"];
+}
 
-    [tabBarItems addObject:tabBarItem0];
-    [tabBarItems addObject:tabBarItem1];
-    [tabBarItems addObject:tabBarItem2];
-    [tabBarItems addObject:tabBarItem3];
-    [tabBarItems addObject:tabBarItem4];
-
-    tabBar.items = tabBarItems;
-    tabBar.selectedItem = [tabBarItems objectAtIndex:3];*/
+- (void)initFittingRoomUnityScene
+{
+    bool unityIntResult = [self initUnity];
+    
+    if(unityIntResult)
+    {
+        NSLog(@"###Unity fitting room did init");
+        [self addTabbarMenu];
+    }
+    else
+    {
+        NSLog(@"###ERROR Unity fitting room didn't init");
+    }
+    
+    [self changeUnityScene:@"ARFittingRoom"];
 }
 
 - (void)unloadButtonTouched:(UIButton *)sender
@@ -336,9 +326,33 @@ NSDictionary* appLaunchOpts;
     }
 }
 
+- (void)quitUnity
+{
+    if(![self unityIsInitialized]) {
+        showAlert(@"Unity is not initialized", @"Initialize Unity first");
+    } else {
+        [UnityFrameworkLoad() quitApplication:0];
+    }
+}
+
+- (void)hideUnity
+{
+    if([self unityIsInitialized]) {
+        [[self ufw] unloadApplication];
+        [[self ufw] unregisterFrameworkListener: self];
+        [self setUfw: nil];
+        [self showHostMainWindow:@""];
+    }
+}
+
+- (void)changeUnityScene:(NSString*)scene
+{
+    [[self ufw] sendMessageToGOWithName: "SceneManager" functionName: "LoadScene" message:[scene UTF8String]];
+}
+
 - (void)unityDidUnload:(NSNotification*)notification
 {
-    NSLog(@"unityDidUnload called");
+    NSLog(@"###unityDidUnload");
     
     [[self ufw] unregisterFrameworkListener: self];
     [self setUfw: nil];
@@ -347,7 +361,7 @@ NSDictionary* appLaunchOpts;
 
 - (void)unityDidQuit:(NSNotification*)notification
 {
-    NSLog(@"unityDidQuit called");
+    NSLog(@"###unityDidQuit");
     
     [[self ufw] unregisterFrameworkListener: self];
     [self setUfw: nil];
@@ -366,10 +380,19 @@ NSDictionary* appLaunchOpts;
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     self.selectedTabIndex = tabBarController.selectedIndex;
-    /*if(tabBarController.selectedIndex == 1 || tabBarController.selectedIndex == 2)
+    
+    if(tabBarController.selectedIndex == 1)
     {
-        [self initUnity];
-    }*/
+        [self initFittingRoomUnityScene];
+    }
+    else if(tabBarController.selectedIndex == 2)
+    {
+        [self initVisualsUnityScene];
+    }
+    else
+    {
+        [self hideUnity];
+    }
 }
 
 #pragma  mark - UITabBarDelegate
@@ -377,17 +400,20 @@ NSDictionary* appLaunchOpts;
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     self.selectedTabIndex = item.tag;
-   /* if(item.tag == 0 || item.tag == 4)
-    {
-        NSLog(@"Tag %li", (long)item.tag);
-        self.viewController.selectedIndex = self.selectedTabIndex;
-       // [_tabBar setSelectedItem:[_tabBar.items objectAtIndex:item.tag]];
-        [[self ufw] unregisterFrameworkListener: self];
-        [self setUfw: nil];
-        [self showHostMainWindow:@""];
-        
-    }*/
     
+    if(item.tag != 1 && item.tag != 2)
+    {
+        self.viewController.selectedIndex = (int)item.tag;
+        [self hideUnity];
+    }
+    else if(item.tag == 1)
+    {
+        [self initFittingRoomUnityScene];
+    }
+    else if(item.tag == 2)
+    {
+        [self initVisualsUnityScene];
+    }
 }
 
 #pragma  mark - TOTabBarProtocol
@@ -400,27 +426,8 @@ NSDictionary* appLaunchOpts;
 
 - (void)showArtUnityScene:(NSString*)art viewController:(UIViewController*)vc closeButton:(UIButton*)closeButton shareButton:(UIButton*)shareButton
 {
-    if([self unityIsInitialized]) {
-        showAlert(@"Unity already initialized", @"Unload Unity first");
-        return;
-    }
-    if([self didQuit]) {
-        showAlert(@"Unity cannot be initialized after quit", @"Use unload instead");
-        return;
-    }
-    
-    [self setUfw: UnityFrameworkLoad()];
-    // Set UnityFramework target for Unity-iPhone/Data folder to make Data part of a UnityFramework.framework and uncomment call to setDataBundleId
-    // ODR is not supported in this case, ( if you need embedded and ODR you need to copy data )
-    [[self ufw] setDataBundleId: "com.unity3d.framework"];
-    [[self ufw] registerFrameworkListener: self];
-    [NSClassFromString(@"FrameworkLibAPI") registerAPIforNativeCalls:self];
-   // [[self ufw] appController].quitHandler = ^(){ NSLog(@"AppController.quitHandler called"); };
-    
-    [[self ufw] runEmbeddedWithArgc: gArgc argv: gArgv appLaunchOpts: appLaunchOpts];
-    
-    // set quit handler to change default behavior of exit app
-    [[self ufw] appController].quitHandler = ^(){  };
+    [self initUnity];
+    [self changeUnityScene:@"ARArts"];
     CGRect closeRect = closeButton.frame;
     CGRect shareRect = shareButton.frame;
     
@@ -447,9 +454,6 @@ NSDictionary* appLaunchOpts;
     [closeButton addTarget:self
                action:@selector(closeArtUnity)
      forControlEvents:UIControlEventTouchUpInside];
-    //NSData *tempArchiveView = [NSKeyedArchiver archivedDataWithRootObject:nc.navigationBar];
-    //UITabBar *navBar = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchiveView];
-    //tabBar.delegate=self;
     _unityViewController = vc;
     auto view = [[[self ufw] appController] rootView];
     [view addSubview:close];
@@ -460,8 +464,7 @@ NSDictionary* appLaunchOpts;
  - (void)closeArtUnity
 {
     NSLog(@"AppController.quitHandler called"); [[self ufw] unregisterFrameworkListener: self];
-        [self setUfw: nil];
-        [self showHostMainWindow:@""];
+    [self hideUnity];
     [_unityViewController dismissViewControllerAnimated:true completion:^{
         
     }];

@@ -60,6 +60,7 @@ namespace XRCasino.AR
         public void SetActiveIndex(string index)
         {
             ActiveIndex = int.Parse(index);
+            Debug.Log("####Set Active index:" + ActiveIndex.ToString() + " in string:" + index);
         }
 
         public void StartScanning()
