@@ -17,6 +17,8 @@
 		A90BE37F27B131A400E322A8 /* TONFTCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BE37E27B131A400E322A8 /* TONFTCodeViewController.m */; };
 		A937EEC127AD54240005390D /* TOArtCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A937EEC027AD54240005390D /* TOArtCollectionViewCell.m */; };
 		A93D029B27B27104009A74E1 /* TOARArtUnityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93D029A27B27104009A74E1 /* TOARArtUnityViewController.m */; };
+		A9BF5B6A2C13B18400F6C80E /* UIScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BF5B692C13B18400F6C80E /* UIScrollMenuView.m */; };
+		A9BF5B702C1473AC00F6C80E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF5B6F2C1473AC00F6C80E /* CoreGraphics.framework */; };
 		A9CD146827AAC5FE00E5A388 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */; };
 		A9CD146927AAC5FE00E5A388 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9CD14BD27ABFB6200E5A388 /* TONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14BC27ABFB6200E5A388 /* TONavigationController.m */; };
@@ -25,6 +27,10 @@
 		A9CD14C727AC06B300E5A388 /* TOARVisualsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14C627AC06B300E5A388 /* TOARVisualsViewController.m */; };
 		A9CD14CA27AC06D300E5A388 /* TOARArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14C927AC06D300E5A388 /* TOARArtViewController.m */; };
 		A9CD14CD27AC073E00E5A388 /* TOProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD14CC27AC073E00E5A388 /* TOProfileViewController.m */; };
+		A9CFB11F2C0EB4F60068A1B6 /* ARFittingRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9CFB11E2C0EB4F60068A1B6 /* ARFittingRoomView.xib */; };
+		A9CFB1222C0EB5240068A1B6 /* ARFittingRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CFB1212C0EB5240068A1B6 /* ARFittingRoomView.m */; };
+		A9CFB1252C0EC6DD0068A1B6 /* UIMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CFB1242C0EC6DD0068A1B6 /* UIMenuButton.m */; };
+		A9E949152C1DEF2800FB4B5E /* UIFitRoomLeftSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E949142C1DEF2800FB4B5E /* UIFitRoomLeftSideMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +98,9 @@
 		A937EEC027AD54240005390D /* TOArtCollectionViewCell.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOArtCollectionViewCell.m; sourceTree = "<group>"; };
 		A93D029927B27104009A74E1 /* TOARArtUnityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOARArtUnityViewController.h; sourceTree = "<group>"; };
 		A93D029A27B27104009A74E1 /* TOARArtUnityViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOARArtUnityViewController.m; sourceTree = "<group>"; };
+		A9BF5B682C13B18400F6C80E /* UIScrollMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIScrollMenuView.h; sourceTree = "<group>"; };
+		A9BF5B692C13B18400F6C80E /* UIScrollMenuView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = UIScrollMenuView.m; sourceTree = "<group>"; };
+		A9BF5B6F2C1473AC00F6C80E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9CD14BC27ABFB6200E5A388 /* TONavigationController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TONavigationController.m; sourceTree = "<group>"; };
 		A9CD14BE27ABFB8E00E5A388 /* TONavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TONavigationController.h; sourceTree = "<group>"; };
@@ -105,6 +114,13 @@
 		A9CD14C927AC06D300E5A388 /* TOARArtViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOARArtViewController.m; sourceTree = "<group>"; };
 		A9CD14CB27AC073E00E5A388 /* TOProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOProfileViewController.h; sourceTree = "<group>"; };
 		A9CD14CC27AC073E00E5A388 /* TOProfileViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TOProfileViewController.m; sourceTree = "<group>"; };
+		A9CFB11E2C0EB4F60068A1B6 /* ARFittingRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARFittingRoomView.xib; sourceTree = "<group>"; };
+		A9CFB1202C0EB5240068A1B6 /* ARFittingRoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARFittingRoomView.h; sourceTree = "<group>"; };
+		A9CFB1212C0EB5240068A1B6 /* ARFittingRoomView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ARFittingRoomView.m; sourceTree = "<group>"; };
+		A9CFB1232C0EC6DD0068A1B6 /* UIMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIMenuButton.h; sourceTree = "<group>"; };
+		A9CFB1242C0EC6DD0068A1B6 /* UIMenuButton.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = UIMenuButton.m; sourceTree = "<group>"; };
+		A9E949132C1DEF2800FB4B5E /* UIFitRoomLeftSideMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIFitRoomLeftSideMenuView.h; sourceTree = "<group>"; };
+		A9E949142C1DEF2800FB4B5E /* UIFitRoomLeftSideMenuView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = UIFitRoomLeftSideMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9BF5B702C1473AC00F6C80E /* CoreGraphics.framework in Frameworks */,
 				9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */,
 				A9CD146827AAC5FE00E5A388 /* UnityFramework.framework in Frameworks */,
 			);
@@ -160,6 +177,7 @@
 		9D78DAFB2265A7FC00274039 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9BF5B6F2C1473AC00F6C80E /* CoreGraphics.framework */,
 				A9CD146727AAC5FE00E5A388 /* UnityFramework.framework */,
 				9D78DAFC2265A7FC00274039 /* UIKit.framework */,
 			);
@@ -182,6 +200,15 @@
 			children = (
 				A937EEBF27AD54240005390D /* TOArtCollectionViewCell.h */,
 				A937EEC027AD54240005390D /* TOArtCollectionViewCell.m */,
+				A9CFB11E2C0EB4F60068A1B6 /* ARFittingRoomView.xib */,
+				A9CFB1202C0EB5240068A1B6 /* ARFittingRoomView.h */,
+				A9CFB1212C0EB5240068A1B6 /* ARFittingRoomView.m */,
+				A9CFB1232C0EC6DD0068A1B6 /* UIMenuButton.h */,
+				A9CFB1242C0EC6DD0068A1B6 /* UIMenuButton.m */,
+				A9BF5B682C13B18400F6C80E /* UIScrollMenuView.h */,
+				A9BF5B692C13B18400F6C80E /* UIScrollMenuView.m */,
+				A9E949132C1DEF2800FB4B5E /* UIFitRoomLeftSideMenuView.h */,
+				A9E949142C1DEF2800FB4B5E /* UIFitRoomLeftSideMenuView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +334,7 @@
 			files = (
 				9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */,
 				9D15FC4C2264A1600006315A /* Assets.xcassets in Resources */,
+				A9CFB11F2C0EB4F60068A1B6 /* ARFittingRoomView.xib in Resources */,
 				9D15FC4A2264A1600006315A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,10 +350,14 @@
 				A90BE37F27B131A400E322A8 /* TONFTCodeViewController.m in Sources */,
 				A9CD14BD27ABFB6200E5A388 /* TONavigationController.m in Sources */,
 				A9CD14CD27AC073E00E5A388 /* TOProfileViewController.m in Sources */,
+				A9E949152C1DEF2800FB4B5E /* UIFitRoomLeftSideMenuView.m in Sources */,
 				A93D029B27B27104009A74E1 /* TOARArtUnityViewController.m in Sources */,
+				A9CFB1222C0EB5240068A1B6 /* ARFittingRoomView.m in Sources */,
 				A9CD14C127ABFCC900E5A388 /* TOHomeViewController.m in Sources */,
 				A90BE37C27B1305F00E322A8 /* TOBaseViewController.m in Sources */,
+				A9CFB1252C0EC6DD0068A1B6 /* UIMenuButton.m in Sources */,
 				A9CD14C427ABFFA500E5A388 /* TOFittingRoomViewController.m in Sources */,
+				A9BF5B6A2C13B18400F6C80E /* UIScrollMenuView.m in Sources */,
 				A937EEC127AD54240005390D /* TOArtCollectionViewCell.m in Sources */,
 				A9CD14C727AC06B300E5A388 /* TOARVisualsViewController.m in Sources */,
 				A90BE37527B12D5600E322A8 /* TONFTNavigationViewController.m in Sources */,
@@ -472,7 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = M9D35F83S4;
 				INFOPLIST_FILE = "TryOn-ObjectiveC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -492,7 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = M9D35F83S4;
 				INFOPLIST_FILE = "TryOn-ObjectiveC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

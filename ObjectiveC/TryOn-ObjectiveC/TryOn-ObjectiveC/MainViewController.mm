@@ -5,6 +5,9 @@
 #import "TOProtocols.h"
 #import "TOBaseViewController.h"
 #import "TONavigationController.h"
+#import "UIScrollMenuView.h"
+#import "UIMenuButton.h"
+#import "UIFitRoomLeftSideMenuView.h"
 
 UnityFramework* UnityFrameworkLoad()
 {
@@ -35,7 +38,27 @@ void showAlert(NSString* title, NSString* msg) {
 @interface TOTabBarController : UITabBarController 
 @end
 
-@interface AppDelegate : UIResponder<UIApplicationDelegate, UnityFrameworkListener, NativeCallsProtocol, UITabBarControllerDelegate, UITabBarDelegate, TOTabBarProtocol>
+struct ARRoomUi {
+public:
+    UIView * bottomUI;
+    UIFitRoomLeftSideMenuView *leftSideUi;
+    UIButton *cartButton;
+    UIButton *addToCartButton;
+    UIScrollMenuView *scrollMenu;
+    
+    
+};
+
+struct ARVisualsUi {
+public:
+    UIFitRoomLeftSideMenuView *leftSideUi;
+    UIButton *switchCameraButton;
+    UIButton *addToCartButton;
+    UIScrollMenuView *scrollMenu;
+};
+
+
+@interface AppDelegate : UIResponder<UIApplicationDelegate, UnityFrameworkListener, NativeCallsProtocol, UITabBarControllerDelegate, UITabBarDelegate, TOTabBarProtocol, UIScrollMenuDelegate, UIFitRoomLeftSideMenuDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) UIButton *showUnityOffButton;
@@ -46,6 +69,12 @@ void showAlert(NSString* title, NSString* msg) {
 @property (nonatomic, strong) TOTabBarController *viewController;
 @property (nonatomic, assign) NSInteger selectedTabIndex;
 @property (nonatomic, strong) UIViewController *unityViewController;
+@property (nonatomic, strong) NSArray *categories;
+@property (nonatomic, strong) NSNumber *activeCategory;
+@property (nonatomic, strong) NSNumber *activeItem;
+@property (nonatomic, assign) struct ARRoomUi arRoomUI;
+@property (nonatomic, assign) struct ARVisualsUi arVisualsUI;
+@property (nonatomic, assign) bool isSelectColor;
 
 
 @property UnityFramework* ufw;
@@ -86,7 +115,6 @@ AppDelegate* hostDelegate = NULL;
     [super viewDidLoad];
    
     self.view.backgroundColor = [UIColor blueColor];
-    
     
     // INIT UNITY
    /* self.unityInitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
@@ -198,7 +226,87 @@ NSDictionary* appLaunchOpts;
     /*self.navVC = [[UINavigationController alloc] initWithRootViewController: self.viewController];*/
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    //[self initUnity];
+    
+    self.isSelectColor = false;
+    self.activeCategory = @-1;
+    self.activeItem = @0;
+    
+    NSDictionary * clothes = @{ @"icon"     : [UIImage imageNamed:@"btn_category_0"],
+                                @"background" : [UIImage imageNamed:@"bg_circle"],
+                                @"name" : @"Clothes",
+                                @"id" : @1,
+                                @"items" : @[
+                                    @{
+                                        @"icon": [UIImage imageNamed:@"tshirt0"],
+                                        @"background" : [UIImage imageNamed:@"bg_circle"],
+                                        @"colors": @[
+                                            @{
+                                               @"name":@"blue",
+                                               @"icon":[UIImage imageNamed:@"img_color_blue"],
+                                               @"background" : [UIImage imageNamed:@"bg_circle"],
+                                               @"code" : @1,
+                                           },
+                                            @{
+                                               @"name":@"Mint",
+                                               @"icon":[UIImage imageNamed:@"img_color_mint"],
+                                               @"background" : [UIImage imageNamed:@"bg_circle"],
+                                               @"code" : @0,
+                                           },
+                                            @{
+                                               @"name":@"black",
+                                               @"icon":[UIImage imageNamed:@"img_color_black"],
+                                               @"background" : [UIImage imageNamed:@"bg_circle"],
+                                               @"code" : @2,
+                                           }
+                                           ]
+                                    
+                                    }
+                                ],
+                              };
+    
+    NSDictionary * accessoris = @{ @"icon"     : [UIImage imageNamed:@"btn_category_1"],
+                                 @"background" : [UIImage imageNamed:@"bg_circle"],
+                                 @"name" : @"Accessories",
+                                 @"id" : @2,
+                                 @"items" : @[
+                                       @{
+                                           @"icon": [UIImage imageNamed:@"img_bag"],
+                                           @"background" : [UIImage imageNamed:@"bg_circle"],
+                                           @"colors": @[
+                                            @{
+                                               @"name":@"blue",
+                                               @"icon":[UIImage imageNamed:@"img_color_blue"],
+                                               @"background" : [UIImage imageNamed:@"bg_circle"],
+                                               @"code" : @1,
+                                           }
+                                           ]
+                                       
+                                       }
+                                   ],
+                              };
+    
+    NSDictionary * furniture = @{ @"icon"     : [UIImage imageNamed:@"btn_category_2"],
+                                 @"background" : [UIImage imageNamed:@"bg_circle"],
+                                 @"name" : @"Furniture",
+                                 @"id" : @3,
+                                  @"items" : @[
+                                      @{
+                                          @"icon": [UIImage imageNamed:@"img_desk"],
+                                          @"background" : [UIImage imageNamed:@"bg_circle"],
+                                          @"colors": @[
+                                              @{
+                                                 @"name":@"blue",
+                                                 @"icon":[UIImage imageNamed:@"img_color_white"],
+                                                 @"background" : [UIImage imageNamed:@"bg_circle"],
+                                                 @"code" : @1,
+                                             }
+                                             ]
+                                      
+                                      }
+                                  ],
+                              };
+    
+    self.categories = @[clothes, accessoris, furniture];
     
     return YES;
 }
@@ -233,6 +341,7 @@ NSDictionary* appLaunchOpts;
 {
     NSInteger selectedIndex = self.viewController.selectedIndex;
     UITabBar *tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(self.viewController.tabBar.frame.origin.x, self.viewController.tabBar.frame.origin.y, self.viewController.tabBar.frame.size.width, self.viewController.tabBar.frame.size.height)];
+    [tabBar setTag:20];
     NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
     UITabBarItem *tabBarItem0 = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"HomeIcon"] tag:0];
     tabBarItem0.selectedImage = [UIImage imageNamed:@"HomeIconSelected"];
@@ -260,9 +369,153 @@ NSDictionary* appLaunchOpts;
     [view addSubview:tabBar];
 }
 
+- (bool)isInsideCatagory
+{
+    return ([self.activeCategory intValue] >= 0)? true: false;
+}
+
+- (void)addARRoomUI
+{
+    auto view = [[[self ufw] appController] rootView];
+    int tabBarHeight = [view viewWithTag:20].frame.size.height;
+    int tabBarWidth = [view viewWithTag:20].frame.size.width;
+    int widthSideMenu = 44;
+    int xSideMenu = 16;
+    int space = 20;
+    int ySideMenu = (view.frame.size.height - widthSideMenu - tabBarHeight) / 2;
+    int height = widthSideMenu * 3 + space * 2;
+    self.activeCategory = @-1;
+    self.isSelectColor = false;
+    
+    if(!self.arRoomUI.leftSideUi)
+    {
+        ARRoomUi ui = self.arRoomUI;
+        ui.leftSideUi = [[UIFitRoomLeftSideMenuView alloc] initWithFrame:CGRectMake(xSideMenu, ySideMenu, widthSideMenu, height)];
+        [ui.leftSideUi setTag:111];
+        ui.leftSideUi.isInsideCategory = [self isInsideCatagory];
+        ui.leftSideUi.delegate = self;
+        self.arRoomUI = ui;
+        [view addSubview:self.arRoomUI.leftSideUi];
+    }
+    else
+    {
+        self.arRoomUI.leftSideUi.frame = CGRectMake(xSideMenu, ySideMenu, widthSideMenu, height);
+        [self.arRoomUI.leftSideUi setHidden:false];
+        [view bringSubviewToFront:self.arRoomUI.leftSideUi];
+    }
+    
+    
+    if(!self.arRoomUI.cartButton)
+    {
+        ARRoomUi ui = self.arRoomUI;
+        ui.cartButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        ui.cartButton.frame = CGRectMake(325, 49, 34, 34);
+        [ui.cartButton setImage:[UIImage imageNamed:@"btn_cart"] forState:UIControlStateNormal];
+        [ui.cartButton setHidden:false];
+        self.arRoomUI = ui;
+        [view addSubview:self.arRoomUI.cartButton];
+    }
+    else
+    {
+        self.arRoomUI.cartButton.frame = CGRectMake(325, 49, 34, 34);
+        [self.arRoomUI.cartButton setHidden:false];
+    }
+    
+    
+    int bottomFitRoomUIWidth = view.bounds.size.width;
+    int bottomFitRoomUIHeight = 138;
+    int bottomFitRoomUIY = view.bounds.size.height - tabBarHeight - bottomFitRoomUIHeight;
+    
+    if(!self.arRoomUI.bottomUI)
+    {
+        ARRoomUi ui = self.arRoomUI;
+        ui.bottomUI = [[UIView alloc] initWithFrame:CGRectMake(0, bottomFitRoomUIY, bottomFitRoomUIWidth, bottomFitRoomUIHeight)];
+        ui.bottomUI.backgroundColor = [UIColor clearColor];
+        
+        int menuY = 0;
+        int menuHeight = 72;
+        ui.scrollMenu = [self categoriesMenu:CGRectMake(0, menuY, ui.bottomUI.bounds.size.width, menuHeight)];
+        [ui.scrollMenu update];
+        [ui.bottomUI addSubview:ui.scrollMenu];
+        
+        int cartButtonWidth = ui.bottomUI.bounds.size.width - 16 * 2;
+        int cartButtonHeight = 44;
+        int cartButtonY = ui.bottomUI.bounds.size.height - cartButtonHeight - 16;
+        
+        ui.addToCartButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        ui.addToCartButton.frame = CGRectMake(16, cartButtonY, cartButtonWidth, cartButtonHeight);
+        ui.addToCartButton.tag = 21;
+        [ui.addToCartButton setImage:[UIImage imageNamed:@"btn_addcart_2"] forState:UIControlStateDisabled];
+        [ui.addToCartButton setImage:[UIImage imageNamed:@"btn_addcart_1"] forState:UIControlStateNormal];
+        [ui.bottomUI addSubview:ui.addToCartButton];
+        [ui.bottomUI setHidden:false];
+        self.arRoomUI = ui;
+        [view addSubview:self.arRoomUI.bottomUI];
+    }
+    else
+    {
+        self.arRoomUI.bottomUI.frame = CGRectMake(0, bottomFitRoomUIY, bottomFitRoomUIWidth, bottomFitRoomUIHeight);
+        [self.arRoomUI.bottomUI setHidden:false];
+        [view bringSubviewToFront:self.arRoomUI.bottomUI];
+    }
+    
+    if([self isInsideCatagory])
+    {
+        self.arRoomUI.addToCartButton.enabled = true;
+    }
+    else
+    {
+        self.arRoomUI.addToCartButton.enabled = false;
+    }
+}
+
+- (void)addARVisualsUI
+{
+    
+}
+
+- (UIScrollMenuView*)categoriesMenu:(CGRect)frame
+{
+    if(self.arRoomUI.scrollMenu)
+    {
+        [self.arRoomUI.scrollMenu setHidden:false];
+    }
+    else
+    {
+        ARRoomUi ui = self.arRoomUI;
+        
+        ui.scrollMenu = [[UIScrollMenuView alloc] initWithFrame:frame];
+        ui.scrollMenu.delegateCustom = self;
+        self.arRoomUI = ui;
+    }
+    
+    return self.arRoomUI.scrollMenu;
+}
+
+- (void)hideArRoomUI
+{
+    if(self.arRoomUI.leftSideUi)
+    {
+        [self.arRoomUI.leftSideUi setHidden:true];
+    }
+    
+    if(self.arRoomUI.cartButton)
+    {
+        [self.arRoomUI.cartButton setHidden:true];
+    }
+    
+    if(self.arRoomUI.bottomUI)
+    {
+        [self.arRoomUI.bottomUI setHidden:true];
+    }
+}
+
+
 - (void)initArtUnityScene
 {
     bool unityIntResult = [self initUnity];
+    
+    [self hideArRoomUI];
     
     if(unityIntResult)
     {
@@ -277,6 +530,8 @@ NSDictionary* appLaunchOpts;
 - (void)initVisualsUnityScene
 {
     bool unityIntResult = [self initUnity];
+    
+    [self hideArRoomUI];
     
     if(unityIntResult)
     {
@@ -305,6 +560,7 @@ NSDictionary* appLaunchOpts;
         NSLog(@"###ERROR Unity fitting room didn't init");
     }
     
+    [self addARRoomUI];
     [self changeUnityScene:@"ARFittingRoom"];
 }
 
@@ -349,6 +605,12 @@ NSDictionary* appLaunchOpts;
 {
     [[self ufw] sendMessageToGOWithName: "SceneManager" functionName: "LoadScene" message:[scene UTF8String]];
 }
+
+- (void)changeUnitySceneColor:(NSString*)colorCode
+{
+    [[self ufw] sendMessageToGOWithName: "SceneManager" functionName: "SwitchColor" message:[colorCode UTF8String]];
+}
+
 
 - (void)unityDidUnload:(NSNotification*)notification
 {
@@ -471,6 +733,130 @@ NSDictionary* appLaunchOpts;
 }
 
 -(void)shareArtUnity
+{
+    
+}
+
+#pragma mark - UIScrollMenuDelegate
+
+- (UIMenuButton*)buttonAtIndex:(NSUInteger)index
+{
+    UIMenuButton *button = NULL;
+    
+    if([self isInsideCatagory])
+    {
+        if(self.isSelectColor)
+        {
+            NSDictionary *colorData = [[[[[self.categories objectAtIndex:self.activeCategory.intValue] objectForKey:@"items"] objectAtIndex:self.activeItem.intValue] objectForKey:@"colors"] objectAtIndex:index];
+            button = [[UIMenuButton alloc] initWithFrame:CGRectMake(0, 0, self.arRoomUI.scrollMenu.bounds.size.height, self.arRoomUI.scrollMenu.bounds.size.height)];
+            [button setButtonImage:[colorData objectForKey:@"icon"]];
+            [button setBackgroundImage:[colorData objectForKey:@"background"]];
+        }
+        else
+        {
+            NSDictionary *itemData = [[[self.categories objectAtIndex:self.activeCategory.intValue] objectForKey:@"items"] objectAtIndex:index];
+            button = [[UIMenuButton alloc] initWithFrame:CGRectMake(0, 0, self.arRoomUI.scrollMenu.bounds.size.height, self.arRoomUI.scrollMenu.bounds.size.height)];
+            [button setButtonImage:[itemData objectForKey:@"icon"]];
+            [button setBackgroundImage:[itemData objectForKey:@"background"]];
+        }
+    }
+    else
+    {
+        NSDictionary *categoryData = [self.categories objectAtIndex:index];
+        button = [[UIMenuButton alloc] initWithFrame:CGRectMake(0, 0, self.arRoomUI.scrollMenu.bounds.size.height, self.arRoomUI.scrollMenu.bounds.size.height)];
+        [button setButtonImage:[categoryData objectForKey:@"icon"]];
+        [button setBackgroundImage:[categoryData objectForKey:@"background"]];
+    }
+    
+    
+    return button;
+}
+
+- (NSInteger)buttonsCount
+{
+    if([self isInsideCatagory])
+    {
+        if(self.isSelectColor)
+        {
+            return [[[[[self.categories objectAtIndex:self.activeCategory.intValue] objectForKey:@"items"] objectAtIndex:self.activeItem.intValue] objectForKey:@"colors"] count];
+        }
+        else
+        {
+            return [[[self.categories objectAtIndex:self.activeCategory.intValue] objectForKey:@"items"] count];
+        }
+    }
+    else
+    {
+        return [self.categories count];
+    }
+}
+
+- (void)buttonsPressedAtIndex:(NSInteger)index
+{
+    if([self isInsideCatagory]) return;
+    
+    NSLog(@"buttonsPressedAtIndex: %li", (long)index);
+    self.activeCategory = [NSNumber numberWithInteger:index];
+    
+    if(self.arRoomUI.leftSideUi)
+    {
+        self.arRoomUI.leftSideUi.isInsideCategory = [self isInsideCatagory];
+    }
+    
+    [self.arRoomUI.scrollMenu update];
+    
+    switch (index) {
+        case 1:
+            [self changeUnityScene:@"ARAccessorice"];
+            break;
+            
+        case 2:
+            [self changeUnityScene:@"ARFurniture"];
+            break;
+            
+        default:
+            [self changeUnityScene:@"ARFittingRoom"];
+            break;
+    }
+}
+
+- (void)buttonsScrollToIndex:(NSInteger)index
+{
+    if([self isInsideCatagory] && self.isSelectColor)
+    {
+        [self changeUnitySceneColor:[NSString stringWithFormat:@"%li", index]];
+    }
+}
+
+#pragma mark - UIFitRoomLeftSideMenuDelegate
+
+- (void)colorButtonPressed
+{
+    self.isSelectColor = !self.isSelectColor;
+    [self.arRoomUI.scrollMenu update];
+}
+
+- (void)menuButtonPressed
+{
+    if(self.arRoomUI.leftSideUi)
+    {
+        if(self.arRoomUI.leftSideUi.isInsideCategory)
+        {
+            self.activeCategory = @-1;
+        }
+        
+        self.arRoomUI.leftSideUi.isInsideCategory = [self isInsideCatagory];
+        
+        if(self.arRoomUI.addToCartButton)
+        {
+            [self.arRoomUI.addToCartButton setEnabled:[self isInsideCatagory]];
+        }
+        
+        [self.arRoomUI.scrollMenu update];
+    }
+}
+
+- (void)activeCategoryPressed
 {
     
 }

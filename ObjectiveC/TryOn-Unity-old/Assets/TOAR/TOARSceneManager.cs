@@ -45,6 +45,18 @@ namespace TOAR.Scene
             Debug.Log("### Load scene name:" + sceneName);
             UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
         }
+        
+        public void SwitchColor(string code)
+        {
+            var index = int.Parse(code);
+            Debug.Log("### Load scene name:" + index);
+            SwitchColor color = GameObject.FindObjectOfType<SwitchColor>();
+
+            if (color != null)
+            {
+                color.ChangeColor(index);
+            }
+        }
     }
 }
 

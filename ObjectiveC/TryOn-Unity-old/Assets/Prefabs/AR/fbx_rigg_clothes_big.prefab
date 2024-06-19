@@ -183,6 +183,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6197480735281117040, guid: f787a32143eb848f0a75f9d1ae33cd4b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f787a32143eb848f0a75f9d1ae33cd4b,
         type: 3}
       propertyPath: m_Name
@@ -223,11 +228,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f787a32143eb848f0a75f9d1ae33cd4b,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 177461720336066508}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f787a32143eb848f0a75f9d1ae33cd4b,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2698237409556972844}
   m_SourcePrefab: {fileID: 100100000, guid: f787a32143eb848f0a75f9d1ae33cd4b, type: 3}
 --- !u!4 &2440363474291162976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5661044057310315285, guid: f787a32143eb848f0a75f9d1ae33cd4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8020339421862116469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &3592207496276863499 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2407194227622226306, guid: f787a32143eb848f0a75f9d1ae33cd4b,
     type: 3}
   m_PrefabInstance: {fileID: 8020339421862116469}
   m_PrefabAsset: {fileID: 0}
@@ -258,6 +273,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &177461720336066508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173268715170562340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21bb547769a5344f180c27dbc3191d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Renderer: {fileID: 3592207496276863499}
+  m_Materials:
+  - {fileID: 2100000, guid: d79f324baaf7042b8aebbeaacc46c72b, type: 2}
+  - {fileID: 2100000, guid: 816e9846b0b0c495083d10595cfa4a95, type: 2}
+  - {fileID: 2100000, guid: 8ad0a4ac493a246d8be969b8495822d4, type: 2}
 --- !u!114 &2698237409556972844
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="28u-3Y-hPr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="28u-3Y-hPr">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4864" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -46,7 +46,7 @@
         <scene sceneID="FwZ-1O-0Z8">
             <objects>
                 <navigationController storyboardIdentifier="FittingRoomNavigationController" title="Fitting Room" id="4MW-sl-s7N" customClass="TONavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fitting Room" image="FittingRoomIcon" selectedImage="FittingRoomSelected" id="2D7-rV-4bZ"/>
+                    <tabBarItem key="tabBarItem" title="AR Room" image="FittingRoomIcon" selectedImage="FittingRoomSelected" id="2D7-rV-4bZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DW6-8L-buC">
                         <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -83,7 +83,9 @@
                             <constraint firstItem="4cu-dK-bWp" firstAttribute="trailing" secondItem="ruk-2V-lHj" secondAttribute="trailing" id="qT6-sS-IiX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3pu-f7-Elg"/>
+                    <navigationItem key="navigationItem" id="3pu-f7-Elg">
+                        <barButtonItem key="rightBarButtonItem" image="btn_cart" id="D2H-1y-G4E"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoa-sB-cPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -741,8 +743,9 @@
         <image name="ProfileIcon" width="44.333332061767578" height="44"/>
         <image name="ProfileSelected" width="22.333333969116211" height="24"/>
         <image name="ShareButtonCircle" width="34" height="34"/>
+        <image name="btn_cart" width="34" height="34"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

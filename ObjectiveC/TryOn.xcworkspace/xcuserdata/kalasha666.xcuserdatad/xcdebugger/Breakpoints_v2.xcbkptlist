@@ -302,8 +302,8 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -322,38 +322,6 @@
             endingLineNumber = "96"
             landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B219D7B3-5F58-43E8-8965-60DEE38B8D4C - 7e0aa7962a58e2b3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[TOARArtViewController collectionView:didSelectItemAtIndexPath:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/ViewControllers/TOARArtViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "656">
-               </Location>
-               <Location
-                  uuid = "B219D7B3-5F58-43E8-8965-60DEE38B8D4C - d9864723cc938312"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[TOARArtViewController collectionView:didSelectItemAtIndexPath:]_block_invoke"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/ViewControllers/TOARArtViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -366,8 +334,8 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -414,8 +382,8 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "431"
-            endingLineNumber = "431"
+            startingLineNumber = "693"
+            endingLineNumber = "693"
             landmarkName = "-showArtUnityScene:viewController:closeButton:shareButton:"
             landmarkType = "7">
          </BreakpointContent>
@@ -430,87 +398,10 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "429"
-            endingLineNumber = "429"
+            startingLineNumber = "691"
+            endingLineNumber = "691"
             landmarkName = "-showArtUnityScene:viewController:closeButton:shareButton:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "377EEC69-5803-4352-AE52-CE0028615868 - bba6d44f028fc57b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate showArtUnityScene:viewController:closeButton:shareButton:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "403"
-                  endingLineNumber = "403"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "377EEC69-5803-4352-AE52-CE0028615868 - bba6d44f028fc584"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate showArtUnityScene:viewController:closeButton:shareButton:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "410"
-                  endingLineNumber = "410"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "377EEC69-5803-4352-AE52-CE0028615868 - bba6d44f028fc400"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate showArtUnityScene:viewController:closeButton:shareButton:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "414"
-                  endingLineNumber = "414"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "377EEC69-5803-4352-AE52-CE0028615868 - bba6d44f028ffb29"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate showArtUnityScene:viewController:closeButton:shareButton:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "421"
-                  endingLineNumber = "421"
-                  offsetFromSymbolStart = "116">
-               </Location>
-               <Location
-                  uuid = "377EEC69-5803-4352-AE52-CE0028615868 - bba6d44f028ffa11"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate showArtUnityScene:viewController:closeButton:shareButton:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "429"
-                  endingLineNumber = "429"
-                  offsetFromSymbolStart = "116">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -523,87 +414,10 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "423"
-            endingLineNumber = "423"
+            startingLineNumber = "685"
+            endingLineNumber = "685"
             landmarkName = "-sendArtIndex:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7EA272FA-F505-4E6A-9C74-A6F3202FCFA0 - 645b815555a55d31"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate sendArtIndex:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "397"
-                  endingLineNumber = "397"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "7EA272FA-F505-4E6A-9C74-A6F3202FCFA0 - 645b815555a55e5a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate sendArtIndex:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "404"
-                  endingLineNumber = "404"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "7EA272FA-F505-4E6A-9C74-A6F3202FCFA0 - 645b815555a55ec6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate sendArtIndex:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "408"
-                  endingLineNumber = "408"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "7EA272FA-F505-4E6A-9C74-A6F3202FCFA0 - 645b815555a55fef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate sendArtIndex:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "415"
-                  endingLineNumber = "415"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "7EA272FA-F505-4E6A-9C74-A6F3202FCFA0 - 645b815555a560d7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate sendArtIndex:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "423"
-                  endingLineNumber = "423"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -616,72 +430,10 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
             landmarkName = "-tabBarController:didSelectViewController:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C17561B5-3AD0-4599-BB2D-687CC2FF8B2A - c6a7f0fd66274c9c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate tabBarController:didSelectViewController:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "365"
-                  endingLineNumber = "365"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "C17561B5-3AD0-4599-BB2D-687CC2FF8B2A - c6a7f0fd66274fb7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate tabBarController:didSelectViewController:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "372"
-                  endingLineNumber = "372"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "C17561B5-3AD0-4599-BB2D-687CC2FF8B2A - c6a7f0fd66274fca"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate tabBarController:didSelectViewController:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "375"
-                  endingLineNumber = "375"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "C17561B5-3AD0-4599-BB2D-687CC2FF8B2A - c6a7f0fd66274eed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate tabBarController:didSelectViewController:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "382"
-                  endingLineNumber = "382"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -694,42 +446,10 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "-initUnity"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BB56B051-4597-4A72-8B1E-010E48FC01E3 - 5c0433a74bcd13d8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate initUnity]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "208"
-                  endingLineNumber = "208"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "BB56B051-4597-4A72-8B1E-010E48FC01E3 - 5c0433a74bcd13d8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate initUnity]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "208"
-                  endingLineNumber = "208"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -742,8 +462,8 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -758,8 +478,8 @@
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "596"
+            endingLineNumber = "596"
             landmarkName = "-hideUnity"
             landmarkType = "7">
          </BreakpointContent>
@@ -768,77 +488,30 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AC178031-6189-4447-AF43-A38CBCD0E53F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
             landmarkName = "-tabBarController:didSelectViewController:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AC178031-6189-4447-AF43-A38CBCD0E53F - c6a7f0fd66274f2b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate tabBarController:didSelectViewController:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "376"
-                  endingLineNumber = "376"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "AC178031-6189-4447-AF43-A38CBCD0E53F - c6a7f0fd66274f4e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate tabBarController:didSelectViewController:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "379"
-                  endingLineNumber = "379"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "AC178031-6189-4447-AF43-A38CBCD0E53F - c6a7f0fd66274e61"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate tabBarController:didSelectViewController:]"
-                  moduleName = "TryOn-ObjectiveC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kalasha666/UnityProjects/Symspace/symspace/ObjectiveC/TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "386"
-                  endingLineNumber = "386"
-                  offsetFromSymbolStart = "144">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A40729BF-8914-4764-9C9B-470AAF0F0142"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "390"
-            endingLineNumber = "390"
+            startingLineNumber = "652"
+            endingLineNumber = "652"
             landmarkName = "-tabBarController:didSelectViewController:"
             landmarkType = "7">
          </BreakpointContent>
@@ -847,15 +520,63 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AECF98FE-931A-4179-B8F2-2846AE6E98F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "656"
+            endingLineNumber = "656"
+            landmarkName = "-tabBarController:didSelectViewController:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD09AB30-68D3-4BD2-9C84-9208104E7C35"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
-            landmarkName = "-tabBarController:didSelectViewController:"
+            startingLineNumber = "555"
+            endingLineNumber = "555"
+            landmarkName = "-initFittingRoomUnityScene"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FE577B8-F010-4995-9169-4851000DD969"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "560"
+            endingLineNumber = "560"
+            landmarkName = "-initFittingRoomUnityScene"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09B7A780-34FB-4C04-9C6D-2B7F7A7D61A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TryOn-ObjectiveC/TryOn-ObjectiveC/MainViewController.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "564"
+            endingLineNumber = "564"
+            landmarkName = "-initFittingRoomUnityScene"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
