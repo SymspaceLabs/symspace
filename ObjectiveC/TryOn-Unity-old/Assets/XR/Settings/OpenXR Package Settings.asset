@@ -449,8 +449,6 @@ MonoBehaviour:
   m_Name: Android
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -7624656283378442728}
-  - {fileID: 6143094082688992112}
   - {fileID: -7111655722954234924}
   - {fileID: -5597684147705407905}
   - {fileID: -6127940558498634011}
@@ -458,6 +456,7 @@ MonoBehaviour:
   - {fileID: -4774337619852824482}
   - {fileID: -1016406964716859656}
   - {fileID: -303474002267115255}
+  - {fileID: 6143094082688992112}
   - {fileID: -1358700537663941641}
   - {fileID: -662991626655971976}
   - {fileID: -5243949244038239994}
@@ -465,6 +464,7 @@ MonoBehaviour:
   - {fileID: 654585086815751645}
   - {fileID: 5302521447119999709}
   - {fileID: 4536017444297644175}
+  - {fileID: -7624656283378442728}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -524,13 +524,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: OpenXR Package Settings
   m_EditorClassIdentifier: 
-  Keys: 0100000004000000070000000d00000024000000
+  Keys: 0100000004000000070000000d0000002400000019000000
   Values:
   - {fileID: 4170939329476167076}
   - {fileID: 8023652963916831203}
   - {fileID: -652263776937290995}
   - {fileID: -3471500678974374694}
   - {fileID: -5250932814528944823}
+  - {fileID: 6038461775716792858}
 --- !u!114 &654585086815751645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,8 +708,6 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -5029505546999293855}
-  - {fileID: -3113152988475210166}
   - {fileID: 931481194233694886}
   - {fileID: 5289053380274820919}
   - {fileID: 692718397071928096}
@@ -717,6 +716,7 @@ MonoBehaviour:
   - {fileID: 3463610023635778106}
   - {fileID: 837171470580912678}
   - {fileID: -2192950315100194468}
+  - {fileID: -3113152988475210166}
   - {fileID: 8194330860924972372}
   - {fileID: 7815345213861180721}
   - {fileID: -5494211855928139650}
@@ -725,6 +725,7 @@ MonoBehaviour:
   - {fileID: -4641822370730380300}
   - {fileID: 7236764803756433515}
   - {fileID: -2620582684572354368}
+  - {fileID: -5029505546999293855}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -807,6 +808,47 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+--- !u!114 &6020184378897961735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b213d3e3c7f3109449eb46a4c8ee42f0, type: 3}
+  m_Name: XrPerformanceSettingsFeature tvOS
+  m_EditorClassIdentifier: 
+  m_enabled: 0
+  nameUi: XR Performance Settings
+  version: 1.0.0
+  featureIdInternal: com.unity.openxr.feature.extension.performance_settings
+  openxrExtensionStrings: XR_EXT_performance_settings
+  company: Unity
+  priority: 0
+  required: 0
+--- !u!114 &6038461775716792858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
+  m_Name: tvOS
+  m_EditorClassIdentifier: 
+  features:
+  - {fileID: 6020184378897961735}
+  m_renderMode: 1
+  m_autoColorSubmissionMode: 1
+  m_colorSubmissionModes:
+    m_List: 00000000
+  m_depthSubmissionMode: 0
+  m_optimizeBufferDiscards: 0
+  m_symmetricProjection: 0
 --- !u!114 &6143094082688992112
 MonoBehaviour:
   m_ObjectHideFlags: 0
